@@ -2,12 +2,12 @@
 
 namespace TraversalCoreProje.ViewComponents.Default
 {
-    public class SliderPartial : ViewComponent
+    public class _SliderPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
-        {
-
-        return View(); 
-        }
+            {
+            return View(); 
+            }
+        
     }
 }
