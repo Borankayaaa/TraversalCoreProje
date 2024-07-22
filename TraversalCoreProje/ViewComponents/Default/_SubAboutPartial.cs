@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TraversalCoreProje.ViewComponents.Default
 {
     public class _SubAboutPartial : ViewComponent
     {
+        SubAboutManager subAboutManager = new SubAboutManager(new EfSubAboutDal());
         public IViewComponentResult Invoke()
         {
-
-        return View();
+            var values = subAboutManager.GetList();
+            return View(values);
         }
     }
 }
